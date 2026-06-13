@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8" />
+<title>Salus — Investor Slide 1920×1080</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+  body{background:#11151f;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px}
+  .frame{width:1920px;height:1080px;position:relative;overflow:hidden;color:#fff;border-radius:14px;
+    background:radial-gradient(1100px 700px at 85% 8%,rgba(45,212,191,.16),transparent 55%),
+               radial-gradient(900px 700px at 8% 95%,rgba(185,150,74,.18),transparent 55%),
+               linear-gradient(155deg,#0A2463,#061539 80%)}
+  .ecg{position:absolute;top:0;left:0;width:100%;height:260px;opacity:.3}
+  .ecg path{fill:none;stroke:#D4B66E;stroke-width:3;filter:drop-shadow(0 0 8px rgba(212,182,110,.7))}
+  .pad{position:relative;z-index:2;height:100%;padding:80px 96px;display:flex;flex-direction:column}
+  .head{display:flex;align-items:center;gap:16px}
+  .pulse{width:22px;height:22px;border-radius:50%;background:#B9964A;box-shadow:0 0 22px 4px rgba(185,150,74,.55)}
+  .brand{font-size:30px;font-weight:800}.brand b{color:#B9964A}
+  .brand .by{font-size:15px;font-weight:600;color:rgba(255,255,255,.45);letter-spacing:2px;text-transform:uppercase;margin-left:8px}
+  h1{font-size:84px;font-weight:900;letter-spacing:-.03em;line-height:1.02;margin-top:40px;max-width:1250px}
+  h1 .g{background:linear-gradient(120deg,#D4B66E,#B9964A);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{font-size:26px;color:rgba(255,255,255,.7);margin-top:22px;max-width:1050px;line-height:1.5}
+  .lead b{color:#D4B66E}
+  .stats{display:flex;gap:30px;margin-top:54px}
+  .stat{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:22px;padding:34px 36px}
+  .stat.hero{background:linear-gradient(150deg,rgba(13,148,136,.3),rgba(13,148,136,.08));border-color:rgba(45,212,191,.4)}
+  .stat .lbl{font-size:18px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .stat .num{font-size:72px;font-weight:900;letter-spacing:-.03em;margin:8px 0 4px}
+  .stat.hero .num{color:#2DD4BF}
+  .stat .sub{font-size:19px;color:rgba(255,255,255,.6)}
+  .bottom{display:flex;gap:30px;margin-top:auto;align-items:flex-end}
+  .rev{flex:1}
+  .rev h3{font-size:20px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:18px}
+  .revgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:1080px}
+  .rc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:14px 16px;font-size:16px;font-weight:600;display:flex;align-items:center;gap:9px}
+  .rc .e{font-size:18px}
+  .apps{display:flex;gap:18px;flex:none}
+  .mini{width:150px;height:210px;border-radius:24px;background:#0b0b0f;padding:6px;position:relative;box-shadow:0 30px 50px -18px rgba(0,0,0,.6),0 0 0 2px #1b1b22}
+  .mini.gold{box-shadow:0 30px 56px -18px rgba(185,150,74,.5),0 0 0 2px #1b1b22}
+  .mini.teal{box-shadow:0 30px 56px -18px rgba(13,148,136,.55),0 0 0 2px #1b1b22}
+  .mini::before{content:"";position:absolute;top:11px;left:50%;transform:translateX(-50%);width:46px;height:12px;background:#000;border-radius:8px;z-index:3}
+  .ms{width:100%;height:100%;border-radius:19px;background:#F7F9FC;overflow:hidden;padding:20px 8px 0}
+  .mb{font-size:11px;font-weight:800;color:#0A2463;padding:0 3px}.mb .g{color:#B9964A}.mb .t{color:#0D9488}
+  .ml{font-size:7px;color:#7a8290;padding:2px 3px 6px;font-weight:600}
+  .mc{display:flex;gap:5px;background:#fff;border-radius:8px;padding:5px;margin-bottom:5px;box-shadow:0 2px 7px rgba(10,36,99,.07)}
+  .mc .i{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;font-size:12px;background:linear-gradient(135deg,#fdf6e6,#f3e6c4)}
+  .mc .i.tl{background:linear-gradient(135deg,#e6fbf7,#c9f2ea)}
+  .mc .n{font-size:7px;font-weight:700;color:#0A2463}.mc .m{font-size:6px;color:#7a8290}
+  .mst{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-bottom:5px}
+  .msx{background:#fff;border-radius:7px;padding:5px 6px;box-shadow:0 2px 7px rgba(10,36,99,.07)}
+  .msx .l{font-size:6px;color:#7a8290;font-weight:600}.msx .v{font-size:11px;font-weight:800;color:#0A2463}
+  .mbar{display:flex;align-items:flex-end;gap:3px;height:30px;background:#fff;border-radius:7px;padding:6px;box-shadow:0 2px 7px rgba(10,36,99,.07)}
+  .mbar i{flex:1;border-radius:2px;background:linear-gradient(#0D9488,#0b7d73)}.mbar i.pk{background:linear-gradient(#D4B66E,#B9964A)}
+  .caplbl{text-align:center;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-top:8px}
+  .caplbl.gold{color:#D4B66E}.caplbl.teal{color:#2DD4BF}
+  .hint{position:fixed;top:8px;left:8px;font-size:11px;color:#5b6473;font-family:monospace}
+</style></head>
+<body>
+<div class="hint">Investor slide · 1920×1080 — screenshot the frame</div>
+<div class="frame">
+  <svg class="ecg" viewBox="0 0 1920 260" preserveAspectRatio="none"><path d="M0,130 L520,130 L555,130 L575,50 L595,210 L615,130 L1180,130 L1215,130 L1235,40 L1255,220 L1275,130 L1920,130"/></svg>
+  <div class="pad">
+    <div class="head"><span class="pulse"></span><span class="brand">Salus<b>.</b><span class="by">by SATG</span></span></div>
+
+    <h1>The Operating System for<br/><span class="g">Global Healthcare.</span></h1>
+    <div class="lead">A two-sided super-platform connecting patients and clinics — <b>like Swiggy + Restaurant Partner</b>, for healthcare. Built for cities and villages alike.</div>
+
+    <div class="stats">
+      <div class="stat"><div class="lbl">India</div><div class="num">2,50,000</div><div class="sub">clinics &amp; hospitals</div></div>
+      <div class="stat hero"><div class="lbl" style="color:rgba(255,255,255,.7)">Global</div><div class="num">5M+</div><div class="sub" style="color:rgba(255,255,255,.7)">clinics worldwide</div></div>
+      <div class="stat"><div class="lbl">TAM</div><div class="num">$15B+</div><div class="sub">total addressable market</div></div>
+    </div>
+
+    <div class="bottom">
+      <div class="rev">
+        <h3>8 Revenue Streams</h3>
+        <div class="revgrid">
+          <div class="rc"><span class="e">％</span>Booking commission</div>
+          <div class="rc"><span class="e">👑</span>Clinic subscriptions</div>
+          <div class="rc"><span class="e">📣</span>Featured listings</div>
+          <div class="rc"><span class="e">🩸</span>Lab test margin</div>
+          <div class="rc"><span class="e">💊</span>Pharmacy delivery</div>
+          <div class="rc"><span class="e">🚐</span>Pickup &amp; drop</div>
+          <div class="rc"><span class="e">📹</span>Online consults</div>
+          <div class="rc"><span class="e">🧠</span>AI Pro insights</div>
+        </div>
+      </div>
+      <div class="apps">
+        <div>
+          <div class="mini gold"><div class="ms">
+            <div class="mb">Sal<span class="g">us</span></div><div class="ml">📍 Find clinics</div>
+            <div class="mc"><div class="i">🏥</div><div><div class="n">Sunrise Hospital</div><div class="m">★ 4.8 · 1.2 km</div></div></div>
+            <div class="mc"><div class="i tl">🦷</div><div><div class="n">Sharma Dental</div><div class="m">★ 4.9 · 2.1 km</div></div></div>
+          </div></div>
+          <div class="caplbl gold">Patients</div>
+        </div>
+        <div>
+          <div class="mini teal"><div class="ms">
+            <div class="mb">Salus <span class="t">Pro</span></div><div class="ml">Dashboard</div>
+            <div class="mst"><div class="msx"><div class="l">Today</div><div class="v">24</div></div><div class="msx"><div class="l">Rev</div><div class="v">₹48k</div></div></div>
+            <div class="mbar"><i style="height:50%"></i><i style="height:70%"></i><i style="height:45%"></i><i style="height:85%"></i><i class="pk" style="height:96%"></i></div>
+          </div></div>
+          <div class="caplbl teal">Clinics</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<title>Salus by SATG — Healthcare. Reimagined for Everyone.</title>
+<meta name="description" content="Salus by SATG — a two-sided healthcare super-platform. Find & book clinics in seconds, and run your clinic from one beautiful dashboard. Built for cities AND villages." />
+
+<!-- Open Graph / social -->
+<meta property="og:title" content="Salus by SATG — Healthcare. Reimagined for Everyone." />
+<meta property="og:description" content="The operating system for global healthcare. Salus Patient + Salus Pro." />
+<meta property="og:type" content="website" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#0A2463',
+          'navy-deep': '#061539',
+          gold: '#B9964A',
+          'gold-light': '#D4B66E',
+          teal: '#0D9488',
+          'teal-light': '#2DD4BF',
+          lightgrey: '#F7F9FC',
+        },
+        fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+      },
+    },
+  };
+</script>
+
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+<!-- Local styles -->
+<link rel="stylesheet" href="styles.css" />
+
+<!-- Lucide icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="font-sans bg-white text-navy antialiased overflow-x-hidden">
+
+<!-- ====================== NAV ====================== -->
+<nav id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-2 group">
+      <span class="pulse-logo"></span>
+      <span class="text-xl font-extrabold tracking-tight nav-brand">Salus<span class="nav-by"> by SATG</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium nav-links">
+      <a href="#problem" class="hover:opacity-60 transition">Problem</a>
+      <a href="#solution" class="hover:opacity-60 transition">Platform</a>
+      <a href="#features" class="hover:opacity-60 transition">Features</a>
+      <a href="#demo" class="hover:opacity-60 transition">Try Demo</a>
+      <a href="#grow" class="hover:opacity-60 transition">Grow</a>
+    </div>
+    <a href="#cta" class="px-5 py-2 rounded-full bg-gold text-white text-sm font-semibold shadow-lg shadow-gold/30 hover:scale-105 transition-transform">Get Early Access</a>
+  </div>
+</nav>
+
+<!-- ====================== SECTION 1 — HERO ====================== -->
+<header id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-navy-deep">
+  <!-- gradient + blobs -->
+  <div class="hero-bg"></div>
+  <div class="blob blob-gold"></div>
+  <div class="blob blob-teal"></div>
+
+  <!-- ECG line -->
+  <svg class="ecg" viewBox="0 0 1440 200" preserveAspectRatio="none" aria-hidden="true">
+    <path class="ecg-path" d="M0,100 L380,100 L410,100 L430,40 L450,160 L470,100 L500,100 L520,100 L540,70 L560,130 L580,100 L900,100 L930,100 L950,30 L970,170 L990,100 L1010,100 L1440,100" />
+  </svg>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center pt-24 pb-16 w-full">
+    <!-- Left: copy -->
+    <div class="text-center lg:text-left">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur border border-white/15 text-white/80 text-xs font-medium tracking-wide mb-7" data-aos="fade-up">
+        <span class="w-1.5 h-1.5 rounded-full bg-teal-light animate-pulse"></span>
+        Now in early access · India 🇮🇳
+      </div>
+
+      <h1 class="hero-title font-black text-white leading-[0.92] tracking-tighter" data-aos="fade-up" data-aos-delay="50">
+        SAL<span class="text-gradient-gold">US</span>
+      </h1>
+
+      <p class="mt-6 text-2xl sm:text-3xl font-semibold text-white/95 leading-tight" data-aos="fade-up" data-aos-delay="120">
+        Healthcare. <span class="text-gold-light">Reimagined</span> for Everyone.
+      </p>
+      <p class="mt-3 text-sm uppercase tracking-[3px] text-white/45 font-medium" data-aos="fade-up" data-aos-delay="180">
+        by SATG · Global Health Technology
+      </p>
+
+      <p class="mt-7 max-w-md mx-auto lg:mx-0 text-white/65 text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="220">
+        Find and book a doctor in seconds — or run your entire clinic from one beautiful dashboard. One platform. Two apps. Built for cities <em>and</em> villages.
+      </p>
+
+      <!-- Early access form -->
+      <form id="hero-form" class="mt-9 flex flex-col sm:flex-row gap-3 max-w-md mx-auto lg:mx-0" data-aos="fade-up" data-aos-delay="280">
+        <input type="email" required placeholder="your@email.com"
+          class="flex-1 px-5 py-3.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-gold focus:bg-white/15 transition" />
+        <button type="submit" class="px-7 py-3.5 rounded-full bg-gold text-white font-semibold shadow-xl shadow-gold/30 hover:scale-105 active:scale-95 transition-transform whitespace-nowrap">
+          Sign Up Early →
+        </button>
+      </form>
+      <p id="hero-form-msg" class="mt-3 text-sm text-teal-light font-medium opacity-0 transition-opacity">✓ You're on the list! We'll be in touch.</p>
+
+      <div class="mt-8 flex items-center justify-center lg:justify-start gap-5" data-aos="fade-up" data-aos-delay="340">
+        <button type="button" id="watch-demo" class="inline-flex items-center gap-2 text-white font-semibold group">
+          <span class="w-11 h-11 rounded-full bg-white/10 border border-white/20 grid place-items-center group-hover:bg-white/20 transition">
+            <i data-lucide="play" class="w-4 h-4 fill-white"></i>
+          </span>
+          Watch Demo
+        </button>
+      </div>
+    </div>
+
+    <!-- Right: floating phone -->
+    <div class="flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="200">
+      <div class="phone-float">
+        <!-- PATIENT HOME MOCKUP -->
+        <div class="device" data-mockup="patient-home"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll cue -->
+  <a href="#problem" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/40 flex flex-col items-center gap-1 text-xs z-10">
+    <span>Scroll</span>
+    <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce"></i>
+  </a>
+</header>
+
+<!-- ====================== SECTION 2 — THE PROBLEM ====================== -->
+<section id="problem" class="relative py-28 bg-white overflow-hidden">
+  <div class="problem-glow"></div>
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <p class="section-label text-rose-500">The Problem</p>
+      <h2 class="section-title">Healthcare access is broken<br class="hidden sm:block" /> for most of India.</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mt-16">
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-num" data-target="85" data-suffix="%">0</div>
+        <p class="stat-desc">of Indians have <strong>never booked</strong> healthcare online.</p>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="120">
+        <div class="stat-num"><span data-prefix="₹">₹</span><span data-target="25000">0</span><span class="text-2xl align-top"> Cr</span></div>
+        <p class="stat-desc">lost every year to clinic <strong>no-shows</strong> &amp; idle slots.</p>
+      </div>
+      <div class="stat-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="stat-num"><span data-target="140">0</span><span class="text-3xl"> M</span></div>
+        <p class="stat-desc"><strong>elderly &amp; rural</strong> citizens with no easy clinic access.</p>
+      </div>
+    </div>
+
+    <p class="text-center text-navy/50 mt-14 text-lg max-w-2xl mx-auto" data-aos="fade-up">
+      The tools exist for food, rides and shopping. <span class="text-navy font-semibold">Healthcare was left behind.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ====================== SECTION 3 — THE SOLUTION (TWO APPS) ====================== -->
+<section id="solution" class="relative py-28 bg-navy-deep text-white overflow-hidden">
+  <div class="solution-split"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <p class="section-label text-gold-light">The Solution</p>
+      <h2 class="section-title text-white">Two apps. One platform.</h2>
+      <p class="mt-5 text-xl text-white/70 font-medium">
+        Like <span class="text-gold-light font-semibold">Swiggy + Restaurant Partner</span> — but for healthcare.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 mt-20 items-center">
+      <!-- Patient -->
+      <div class="flex flex-col items-center text-center" data-aos="fade-right">
+        <div class="device device-glow-gold" data-mockup="patient-home-2"></div>
+        <span class="mt-8 px-4 py-1.5 rounded-full bg-gold/15 border border-gold/30 text-gold-light text-xs font-bold tracking-widest uppercase">For Patients</span>
+        <h3 class="mt-4 text-2xl font-bold">Salus</h3>
+        <p class="mt-2 text-white/60 max-w-xs">Find verified clinics nearby, book in seconds, and access 8 life-saving health services.</p>
+      </div>
+
+      <!-- Pro -->
+      <div class="flex flex-col items-center text-center" data-aos="fade-left">
+        <div class="device device-glow-teal" data-mockup="pro-dashboard"></div>
+        <span class="mt-8 px-4 py-1.5 rounded-full bg-teal/20 border border-teal/40 text-teal-light text-xs font-bold tracking-widest uppercase">For Clinics</span>
+        <h3 class="mt-4 text-2xl font-bold">Salus <span class="text-teal-light">Pro</span></h3>
+        <p class="mt-2 text-white/60 max-w-xs">Manage appointments, revenue, patients and AI insights from one dashboard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== SECTION 4 — FEATURES ====================== -->
+<section id="features" class="py-28 bg-lightgrey">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <p class="section-label text-teal">Features</p>
+      <h2 class="section-title">Eight services. One app.</h2>
+      <p class="mt-5 text-lg text-navy/55">Everything a family needs — from a lab test at home to an emergency at 2am.</p>
+    </div>
+
+    <div id="feature-grid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-16">
+      <!-- cards injected by script.js -->
+    </div>
+    <p class="text-center text-navy/40 text-sm mt-8" data-aos="fade-up">Hover (or tap) a card to flip it →</p>
+  </div>
+</section>
+
+<!-- ====================== SECTION 5 — HOW IT WORKS ====================== -->
+<section id="how" class="py-28 bg-white overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <p class="section-label text-gold">How it works</p>
+      <h2 class="section-title">From registration to real-time booking.</h2>
+    </div>
+
+    <div class="flow mt-20">
+      <div class="flow-step" data-aos="fade-up" data-aos-delay="0">
+        <div class="flow-icon bg-teal/10 text-teal"><i data-lucide="building-2"></i></div>
+        <h4>Clinic registers</h4>
+        <p>Doctor adds clinic, doctors, services &amp; hours in Salus Pro.</p>
+      </div>
+      <div class="flow-arrow" data-aos="fade-up" data-aos-delay="80"><i data-lucide="arrow-right"></i></div>
+      <div class="flow-step" data-aos="fade-up" data-aos-delay="120">
+        <div class="flow-icon bg-gold/10 text-gold"><i data-lucide="shield-check"></i></div>
+        <h4>Admin approves</h4>
+        <p>Each clinic is verified before it ever reaches a patient.</p>
+      </div>
+      <div class="flow-arrow" data-aos="fade-up" data-aos-delay="200"><i data-lucide="arrow-right"></i></div>
+      <div class="flow-step" data-aos="fade-up" data-aos-delay="240">
+        <div class="flow-icon bg-navy/10 text-navy"><i data-lucide="map-pin"></i></div>
+        <h4>Patient discovers</h4>
+        <p>Verified clinic appears live near patients in that city.</p>
+      </div>
+      <div class="flow-arrow" data-aos="fade-up" data-aos-delay="320"><i data-lucide="arrow-right"></i></div>
+      <div class="flow-step" data-aos="fade-up" data-aos-delay="360">
+        <div class="flow-icon bg-teal/10 text-teal"><i data-lucide="calendar-check"></i></div>
+        <h4>Patient books</h4>
+        <p>Picks a doctor, slot &amp; service — pays or chooses pay-at-clinic.</p>
+      </div>
+      <div class="flow-arrow" data-aos="fade-up" data-aos-delay="440"><i data-lucide="arrow-right"></i></div>
+      <div class="flow-step" data-aos="fade-up" data-aos-delay="480">
+        <div class="flow-icon bg-gold/10 text-gold"><i data-lucide="zap"></i></div>
+        <h4>Real-time confirm</h4>
+        <p>Both apps update instantly. The clinic sees the booking live.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== SECTION 6 — VILLAGES ====================== -->
+<section id="villages" class="relative py-28 bg-navy text-white overflow-hidden">
+  <div class="village-grain"></div>
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div data-aos="fade-right">
+        <p class="section-label text-gold-light">For Bharat</p>
+        <h2 class="section-title text-white">Built for cities <span class="text-gold-light">and</span> villages.</h2>
+        <p class="mt-6 text-white/70 text-lg leading-relaxed">
+          Most health apps assume a smartphone-fluent, English-speaking, card-carrying city user. Salus is engineered for the other 900 million too.
+        </p>
+        <div class="mt-8 grid sm:grid-cols-2 gap-3">
+          <div class="village-reason"><i data-lucide="mic"></i> Voice assistant</div>
+          <div class="village-reason"><i data-lucide="languages"></i> 6 Indian languages</div>
+          <div class="village-reason"><i data-lucide="wifi-off"></i> Offline booking</div>
+          <div class="village-reason"><i data-lucide="car"></i> Pickup &amp; drop</div>
+          <div class="village-reason"><i data-lucide="video"></i> Online consults</div>
+          <div class="village-reason"><i data-lucide="message-circle"></i> WhatsApp-first</div>
+          <div class="village-reason sm:col-span-2"><i data-lucide="badge-check"></i> ABDM-trusted &amp; verified clinics</div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4" data-aos="fade-left">
+        <div class="village-photo village-photo-1"><span>🏥 Rural clinic</span></div>
+        <div class="village-photo village-photo-2 mt-8"><span>👵 Elder care</span></div>
+        <div class="village-photo village-photo-3"><span>📱 First-time user</span></div>
+        <div class="village-photo village-photo-4 mt-8"><span>🚐 Last-mile reach</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== SECTION 7 — INVESTORS ====================== -->
+<section id="grow" class="py-28 bg-lightgrey overflow-hidden">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <p class="section-label text-teal">Grow with Salus</p>
+      <h2 class="section-title">We don't just send bookings.<br class="hidden sm:block" /> We grow your clinic.</h2>
+      <p class="mt-5 text-lg text-navy/55">Salus Pro is your entire growth team — website, ads, reviews and AI in one place. You focus on patients; we bring them in.</p>
+    </div>
+
+    <!-- Growth services -->
+    <div class="grow-grid mt-16">
+      <div class="grow-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="grow-ic"><i data-lucide="globe"></i></div>
+        <h4>SEO Website</h4>
+        <p>A fast, beautiful website for your clinic — built to rank on Google so new patients find you first.</p>
+      </div>
+      <div class="grow-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="grow-ic"><i data-lucide="megaphone"></i></div>
+        <h4>Online Ads</h4>
+        <p>We design &amp; run Google, Instagram and Facebook ads that bring real, nearby patients to your door.</p>
+      </div>
+      <div class="grow-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="grow-ic"><i data-lucide="map-pin"></i></div>
+        <h4>Google Business &amp; Maps</h4>
+        <p>A managed, verified Google profile so your clinic appears the moment someone searches nearby.</p>
+      </div>
+      <div class="grow-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="grow-ic"><i data-lucide="star"></i></div>
+        <h4>Reviews &amp; Reputation</h4>
+        <p>Automatically collect happy-patient reviews and showcase your 5-star reputation everywhere.</p>
+      </div>
+      <div class="grow-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="grow-ic"><i data-lucide="instagram"></i></div>
+        <h4>Social Media</h4>
+        <p>Done-for-you posts and reels that keep your clinic top-of-mind across your community.</p>
+      </div>
+      <div class="grow-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="grow-ic"><i data-lucide="message-circle"></i></div>
+        <h4>WhatsApp Marketing</h4>
+        <p>Reminders, health tips and offers sent on the app your patients already check every day.</p>
+      </div>
+      <div class="grow-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="grow-ic"><i data-lucide="sparkles"></i></div>
+        <h4>AI Growth Insights</h4>
+        <p>Salus Pro tells you exactly when to open slots and which services to push to earn more.</p>
+      </div>
+      <div class="grow-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="grow-ic"><i data-lucide="trending-up"></i></div>
+        <h4>Featured Listing</h4>
+        <p>Rise to the top of patient search in your area and capture demand competitors miss.</p>
+      </div>
+    </div>
+
+    <!-- Results band -->
+    <div class="grow-band" data-aos="zoom-in">
+      <div class="grow-stat"><span class="gs-num">3×</span><span class="gs-lbl">more patient bookings</span></div>
+      <span class="grow-div"></span>
+      <div class="grow-stat"><span class="gs-num">#1</span><span class="gs-lbl">on Google near you</span></div>
+      <span class="grow-div"></span>
+      <div class="grow-stat"><span class="gs-num">1</span><span class="gs-lbl">dashboard for it all</span></div>
+      <a href="#cta" class="grow-cta">Register your clinic <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== INTERACTIVE DEMO ====================== -->
+<section id="demo" class="py-28 bg-navy-deep text-white overflow-hidden">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <p class="section-label text-teal-light">Try it yourself</p>
+      <h2 class="section-title text-white">Book a doctor in 3 taps.</h2>
+      <p class="mt-5 text-white/60 text-lg">A live, working demo of the Salus booking flow. No install required.</p>
+    </div>
+
+    <div class="mt-16 flex justify-center" data-aos="zoom-in">
+      <div class="device device-demo">
+        <div class="device-screen" id="demo-screen"><!-- injected by script.js --></div>
+      </div>
+    </div>
+    <p class="text-center text-white/35 text-xs mt-6">This is a demo. Actual booking requires the Salus app.</p>
+  </div>
+</section>
+
+<!-- ====================== SECTION 8 — TEAM ====================== -->
+<section id="team" class="py-28 bg-white">
+  <div class="max-w-4xl mx-auto px-6 text-center" data-aos="fade-up">
+    <p class="section-label text-gold">The Team</p>
+    <h2 class="section-title">SATG — Global Health Technology</h2>
+    <div class="mt-12 flex flex-col items-center">
+      <div class="founder-photo">
+        <span>SATG</span>
+      </div>
+      <h3 class="mt-6 text-xl font-bold text-navy">Founder &amp; CEO</h3>
+      <p class="mt-1 text-navy/50 text-sm uppercase tracking-widest">Hyderabad, India</p>
+      <p class="mt-6 max-w-xl text-navy/65 text-lg leading-relaxed">
+        “Founded by a young entrepreneur from Hyderabad on a mission to digitize healthcare for <em>everyone</em> — not just those who can already afford it. Salus is the first step toward a world where booking a doctor is as easy as ordering food.”
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== SECTION 9 — CTA ====================== -->
+<section id="cta" class="relative py-28 bg-gradient-to-br from-navy via-navy to-teal text-white overflow-hidden">
+  <div class="blob blob-gold opacity-40" style="top:-10%;right:-5%"></div>
+  <div class="max-w-3xl mx-auto px-6 text-center relative z-10" data-aos="zoom-in">
+    <h2 class="text-4xl sm:text-6xl font-black tracking-tight leading-tight">Join the future<br/>of healthcare.</h2>
+    <p class="mt-6 text-white/75 text-lg">Be among the first to experience Salus — for your family, or for your clinic.</p>
+
+    <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+      <button class="cta-btn bg-gold shadow-gold/40" data-toast="📲 Salus patient app — launching soon!">
+        <i data-lucide="smartphone"></i> Download Salus
+      </button>
+      <button class="cta-btn bg-teal shadow-teal/40" data-toast="🏥 Clinic registration — launching soon!">
+        <i data-lucide="building-2"></i> Register Your Clinic
+      </button>
+    </div>
+
+    <form id="cta-form" class="mt-10 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <input type="email" required placeholder="Join the waitlist — your@email.com"
+        class="flex-1 px-5 py-3.5 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-gold transition" />
+      <button type="submit" class="px-7 py-3.5 rounded-full bg-white text-navy font-bold hover:scale-105 active:scale-95 transition-transform">Join →</button>
+    </form>
+    <p id="cta-form-msg" class="mt-3 text-teal-light font-medium opacity-0 transition-opacity">✓ Welcome aboard! You're on the waitlist.</p>
+
+    <div class="mt-10 flex items-center justify-center gap-5 text-white/70">
+      <a href="#" class="social-ic" data-toast="Follow us on LinkedIn"><i data-lucide="linkedin"></i></a>
+      <a href="#" class="social-ic" data-toast="Follow us on Twitter / X"><i data-lucide="twitter"></i></a>
+      <a href="#" class="social-ic" data-toast="Follow us on Instagram"><i data-lucide="instagram"></i></a>
+      <a href="#" class="social-ic" data-toast="Message us on WhatsApp"><i data-lucide="message-circle"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== SECTION 10 — FOOTER ====================== -->
+<footer class="bg-navy-deep text-white/60 py-14">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-3">
+      <span class="pulse-logo pulse-logo-gold"></span>
+      <div>
+        <p class="text-white font-bold text-lg leading-none">Salus</p>
+        <p class="text-xs tracking-wider mt-1">by SATG Global Health Technology</p>
+      </div>
+    </div>
+    <p class="text-sm">Made with care in India 🇮🇳</p>
+    <p class="text-xs text-white/40">© 2026 SATG Global Health Technology. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- toast -->
+<div id="toast" class="toast"></div>
+
+<!-- DEMO VIDEO MODAL (auto-playing product walkthrough) -->
+<div id="demo-modal" class="vmodal" aria-hidden="true">
+  <div class="vmodal-backdrop" data-vclose></div>
+  <div class="vmodal-box" role="dialog" aria-label="Salus product walkthrough">
+    <button class="vmodal-x" data-vclose aria-label="Close"><i data-lucide="x"></i></button>
+    <div class="vmodal-progress"><span id="vbar"></span></div>
+    <div class="vstage"><div class="device" id="vdevice"></div></div>
+    <p class="vcap" id="vcap">&nbsp;</p>
+    <div class="vctrls">
+      <button id="vplay" class="vbtn" aria-label="Play / pause"><i data-lucide="pause"></i></button>
+      <div class="vdots" id="vdots"></div>
+      <button id="vcta" class="vbtn-gold">Try it live <i data-lucide="arrow-right"></i></button>
+    </div>
+  </div>
+</div>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<!-- AOS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<!-- App -->
+<script src="script.js"></script>
+</body>
+</html>
